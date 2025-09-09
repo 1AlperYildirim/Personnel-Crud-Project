@@ -11,7 +11,7 @@ export type PersonnelPayload = {
   department: string;
 };
 
-export const getPersonnel = () => api.get(""); // <-- "/" yerine "" yaptık
+export const getPersonnel = () => api.get(""); 
 export const searchPersonnel = (params: Partial<PersonnelPayload>) =>
   api.get("/search", { params });
 

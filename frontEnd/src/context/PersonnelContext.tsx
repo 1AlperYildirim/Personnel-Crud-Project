@@ -27,7 +27,7 @@ export const PersonnelProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       .then(res => setPersonnel(res.data))
       .catch(err => {
         console.error("GET /api/personnel failed:", err);
-        setPersonnel([]); // artık local dummy veri yok
+        setPersonnel([]); 
       });
   }, []);
 

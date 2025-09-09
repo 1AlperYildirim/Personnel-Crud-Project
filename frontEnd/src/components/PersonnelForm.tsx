@@ -66,7 +66,6 @@ const PersonnelForm: React.FC<Props> = ({ editData, setEditData }) => {
 
     action
       .then(() => {
-        // Başarılı olursa listeyi DB'den yeniden çek
         return getPersonnel();
       })
       .then(res => {

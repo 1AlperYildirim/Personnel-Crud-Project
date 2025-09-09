@@ -1,5 +1,6 @@
 C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\config\SwaggerConfig.java
 C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\dto\PersonnelDTO.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\service\EmailService.java
 C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\config\SecurityConfig.java
 C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\exception\ResourceNotFoundException.java
 C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\mapper\PersonnelMapper.java

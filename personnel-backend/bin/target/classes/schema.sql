@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS personnel (
+    id SERIAL PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    registry_number VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    department VARCHAR(100) NOT NULL
+);

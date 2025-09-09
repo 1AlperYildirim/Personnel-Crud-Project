@@ -1,0 +1,13 @@
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\config\SwaggerConfig.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\dto\PersonnelDTO.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\config\SecurityConfig.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\exception\ResourceNotFoundException.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\mapper\PersonnelMapper.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\repository\PersonnelRepository.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\controller\PersonnelController.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\PersonnelBackendApplication.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\entity\Personnel.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\service\PersonnelServiceImpl.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\exception\GlobalExceptionHandler.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\config\LoggingAspect.java
+C:\Users\alper\Personnel-CRUD\personnel-backend\src\main\java\com\example\personnel\service\PersonnelService.java

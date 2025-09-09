@@ -9,6 +9,7 @@ com\example\personnel\exception\ResourceNotFoundException.class
 com\example\personnel\service\PersonnelServiceImpl.class
 com\example\personnel\controller\PersonnelController.class
 com\example\personnel\dto\PersonnelDTO.class
+com\example\personnel\service\EmailService.class
 com\example\personnel\config\SecurityConfig.class
 com\example\personnel\service\PersonnelService.class
 com\example\personnel\dto\PersonnelDTO$PersonnelDTOBuilder.class

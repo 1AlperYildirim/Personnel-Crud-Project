@@ -14,6 +14,7 @@ import java.util.List;
 public class PersonnelServiceImpl implements PersonnelService {
 
     private final PersonnelRepository repo;
+    private final EmailService emailService;
 
     @Override
     public List<Personnel> getAll() {
@@ -23,7 +24,9 @@ public class PersonnelServiceImpl implements PersonnelService {
     @Override
     public Personnel create(Personnel p) {
         try {
-            return repo.save(p);
+            Personnel saved = repo.save(p);
+            emailService.sendWelcomeEmail(saved.getEmail(), saved.getFullName());
+            return saved;
         } catch (DataIntegrityViolationException ex) {
             throw ex;
         }
@@ -34,13 +37,28 @@ public class PersonnelServiceImpl implements PersonnelService {
         Personnel existing = repo.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Personnel not found: " + id));
 
+        boolean emailChanged = !existing.getEmail().equals(p.getEmail());
+        boolean infoChanged =
+                !existing.getFullName().equals(p.getFullName()) ||
+                !existing.getRegistryNumber().equals(p.getRegistryNumber()) ||
+                !existing.getDepartment().equals(p.getDepartment());
+
         existing.setFullName(p.getFullName());
         existing.setRegistryNumber(p.getRegistryNumber());
         existing.setEmail(p.getEmail());
         existing.setDepartment(p.getDepartment());
 
         try {
-            return repo.save(existing);
+            Personnel updated = repo.save(existing);
+
+            if (emailChanged) {
+                emailService.sendUpdateEmail(updated.getEmail(), updated.getFullName());
+            } 
+            else if (infoChanged) {
+                emailService.sendUpdateEmail(updated.getEmail(), updated.getFullName());
+            }
+
+            return updated;
         } catch (DataIntegrityViolationException ex) {
             throw ex;
         }
@@ -50,6 +68,9 @@ public class PersonnelServiceImpl implements PersonnelService {
     public void delete(Long id) {
         Personnel existing = repo.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Personnel not found: " + id));
+
+        emailService.sendDeletionEmail(existing.getEmail(), existing.getFullName());
+
         repo.delete(existing);
     }
 
@@ -57,5 +78,4 @@ public class PersonnelServiceImpl implements PersonnelService {
     public List<Personnel> search(String fullName, String registry, String email, String department) {
         return repo.findByFilters(fullName, registry, email, department);
     }
-
 }

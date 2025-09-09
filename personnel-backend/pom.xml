@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version> <!-- Burada Spring Boot sürümünü kullanıyoruz -->
+        <version>3.2.2</version> 
         <relativePath/>
     </parent>
 
@@ -24,7 +24,6 @@
         <java.version>17</java.version>
     </properties>
 
-    <!-- BAĞIMLILIKLAR -->
     <dependencies>
 
         <!-- Spring Web -->
@@ -110,7 +109,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- H2 Database (isteğe bağlı, dev için) -->
+        <!-- H2 Database -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -130,6 +129,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
 
     </dependencies>
 

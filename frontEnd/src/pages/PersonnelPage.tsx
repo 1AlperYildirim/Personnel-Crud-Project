@@ -21,7 +21,7 @@ const PersonnelPage: React.FC = () => {
   const [searchEmail, setSearchEmail] = useState("");
   const [searchDepartment, setSearchDepartment] = useState("");
 
-  // İlk yüklemede tüm liste
+  
   useEffect(() => {
     getPersonnel()
       .then(res => setPersonnel(res.data))
@@ -31,7 +31,6 @@ const PersonnelPage: React.FC = () => {
       });
   }, [setPersonnel]);
 
-  // Arama alanları değiştikçe DB’den sorgula (debounce 400ms)
   useEffect(() => {
     const handler = setTimeout(() => {
       const params = {
